@@ -689,11 +689,11 @@
 
 	.participants {
 		margin-bottom: 8.75rem;
+		display: flex;
+		gap: 30px;
 
 		&__container {
 			max-width: 1222px;
-			margin: 0 auto;
-			padding: 0 15px;
 			min-width: 0;
 		}
 
@@ -715,28 +715,19 @@
 		display: flex;
 		color: $blueColor;
 		gap: 15px;
-	}
-	.swiper-button-prev {
-	}
-	.swiper-button-next {
-	}
-	
-	
-		&__navigation {
-			// display: flex;
-			// color: $blueColor;
-			// gap: 15px;
-		}
+		background-color: #838383;
 
-		.participants {
-			display: flex;
-			gap: 30px;
+
+		.swiper-button-prev {
+		}
+		.swiper-button-next {
+		}
 	}
 }
 
 .participants-slider {
-	&__wrapper {	}
-
+	&__wrapper {	
+	}
 	&__slide {
 	}
 }

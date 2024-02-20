@@ -685,10 +685,10 @@
 		}
 	}
 
-	.participants {
-		margin-bottom: 8.75rem;
-		display: flex;
-		gap: 30px;
+.participants {
+	margin-bottom: 8.75rem;
+	display: flex;
+	gap: 30px;
 
 		&__container {
 			max-width: 1222px;
@@ -701,33 +701,52 @@
 			align-items: center;
 			margin-bottom: 60px;
 		}
-	
+
 		&__title {
 			font-family: 'Merriweather';
 			font-size: toRem(54);
 			line-height: 120%;
 		}
 
-
-	.navigation {			
-		display: flex;
-		color: $blueColor;
-		gap: 15px;
-		background-color: #838383;
-
-
-		.swiper-button-prev {
+		&__navigation {
+			display: flex;
+			gap: 15px;
 		}
-		.swiper-button-next {
+}
+.swiper-button-prev,
+.swiper-button-next {
+	width: 44px;
+	height: 44px;
+	background: #313131;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+		img {
+			font-size: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
-	}
-	}
+		@media (any-hover:hover) {
+			&:hover {
+				background: #FBCE51;
+			}
+		}
+	
+		&.swiper-button-disabled {
+			background: #D6D6D6;
+		}
+}
 
 .participants-slider {
-	&__wrapper {	
-	}
-	&__slide {
-	}
+
+		&__wrapper {
+		}
+
+		&__slide {
+		}
 }
 .swiper-container {
 }
@@ -735,13 +754,14 @@
 }
 .swiper-slide {
 }
-
 .participants-slide {
+
 		&__body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 		}
+
 		&__photo {
 			max-width: 100%;
 			position: relative;
@@ -780,6 +800,3 @@
 }
 
 /*============================================*/
-
-
-

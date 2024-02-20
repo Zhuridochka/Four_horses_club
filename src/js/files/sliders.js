@@ -20,7 +20,7 @@ EffectFade, Lazy, Manipulation
 // Базові стилі
 import "../../scss/base/swiper.scss";
 // Повний набір стилів з scss/libs/swiper.scss
-import "../../scss/libs/swiper.scss";
+// import "../../scss/libs/swiper.scss";
 // Повний набір стилів з node_modules
 //import 'swiper/css';
 
@@ -74,8 +74,8 @@ function initSliders() {
 
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.navigation__swiper-button-prev',
-				nextEl: '.navigation__swiper-button-next',
+				prevEl: '.swiper-button-prev',
+				nextEl: '.swiper-button-next',
 			},
 			/*
 			// Брейкпоінти

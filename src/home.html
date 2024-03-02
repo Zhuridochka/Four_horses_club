@@ -7,162 +7,137 @@
 		<div class="wrapper">
 			@@include('html/_header.htm',{})
 			<main class="page">
-				<section class="page-main main-section">
-					<div class="main-section__container">
-						<a href="#" class="main-section__logo"><img src=".//img/main_page/logo.svg" alt="logo"></a>
-							<div class="main-section__images images-section">
-									<div class="images-section__image-ellipse">
+				<section class="page__main main">
+					<div class="main__container">
+						<a href="#" class="main__logo"><img src=".//img/main_page/logo.svg" alt="logo"></a>
+							<div class="main__images images">
+									<div class="images__image-ellipse">
 										<img src=".//img/main_page/Ellipse_6.png" alt="Ellipse"></div>							
-									<div class="images-section__image-ellipsname">
+									<div class="images__image-ellipsname">
 										<img src=".//img/main_page/Ellips_name.png" alt="Ellips name"></div>
-									<div class="images-section__image-chessquin">
+									<div class="images__image-chessquin">
 										<img src=".//img/main_page/Chess_quin.png" alt="Chess Quin"></div>
-									<div class="images-section__image-chessking">
+									<div class="images__image-chessking">
 										<img src=".//img/main_page/chess.png" alt="Chess King"></div>	
-									<div class="images-section__image-city">
+									<div class="images__image-city">
 										<img src=".//img/main_page/city.png" alt="city"></div>
-									<div class="images-section__image-path">
+									<div class="images__image-path">
 										<img src=".//img/main_page/path.png" alt="path"></div>
-									<div class="images-section__image-vector">
+									<div class="images__image-vector">
 										<img src=".//img/main_page/Vector_city.png" alt="vector"></div>
-									<div class="images-section__image-chesssmall">
+									<div class="images__image-chesssmall">
 										<img src=".//img/main_page/Small_chess.png" alt="Chess small"></div>				
-									<div class="images-section__image-chesshorse">
+									<div class="images__image-chesshorse">
 										<img src=".//img/main_page/Chess_horse.png" alt="Chess Horse"></div>
 							</div>
-							<div class="main-section__content">
-								<h1 class="main-section__title">Превратите <p>уездный город</p>
-									<p class="three__line">в столицу</p> <p class="four__line">земного шара</p></h1>
-									<div class="main-section__text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам</div>
-									<div class="main-section__actions">
-										<button type="button" class="main-section__button button button_black">Поддержать <br>шахматную мысль</br></button>
-										<button type="button" class="main-section__button button">Подробнее <br>о турнире</br></button>
+							<div class="main__content">
+								<h1 class="main__title">Превратите <p>уездный город</p>
+									<p class="three__line">в столицу</p> 
+									<p class="four__line">земного шара</p>
+								</h1>
+									<div class="main__text">Оплатите взнос на телеграммы для организации Международного васюкинского турнира по шахматам
+									</div>
+									<div class="main__actions">
+										<button type="button" class="main__button button button_black">Поддержать<p>шахматную мысль</p>
+										</button>
+										<button type="button" class="main__button button">Подробнее<p>о турнире</p>
+										</button>
 									</div>
 							</div>
 					</div>
-				</section>second attempt at navigation__creating a swiper
-				<section class="page-inform inform-section">
-					<div class="inform-section__container">
-						<div class="inform-section__body">
-							<div class="inform-section__idea">
-								<div class="inform-section__text">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: <span>«Плодотворная дебютная идея»</span></div>
-								<div class="inform-section__image">
-									<img src=".//img/idea/mens.png" alt="man">
+					<!-- <marquee behavior="" direction="">
+						<div class="section__ticker">
+							<p>Дело помощи утопающим — дело рук самих утопающих!</p>
+							<p>Шахматы двигают вперёд не только культуру, но и экономику!</p>
+							<p>Лёд тронулся, господа присяжные заседатели!</p>
+						</div></marquee> -->
+				</section>
+				<section class="page__inform inform">
+					<div class="inform__container">
+						<div class="inform__body">
+							<div class="inform__idea">
+								<div class="inform__text">Чтобы поддержать Международный васюкинский турнир посетите лекцию на тему: <span>«Плодотворная дебютная идея»</span></div>
+								<div class="inform__image">
+									<img src="img/idea/mens.png" alt="man">
 								</div>
-							</div>
-							<div class="inform-section__infochees infochees-inform">
-							<div class="infochees-inform__container">
-									<div class="infochees-inform__body">
-										<div class="infochees-inform__images">
-											<div class="infochees-inform__cooper">
-												<img src=".//img/info_chees/Cooper.png" alt="cooper">
-											</div>
-											<div class="infochees-inform__nominale">
-												<img src=".//img/info_chees/nominale.png" alt="nominale">
-											</div>
-											<div class="infochees-inform__Vector-big">
-												<img src=".//img/info_chees/Vector_big.png" alt="vector-big">
-											</div>
-											<div class="infochees-inform__men">
-												<img src=".//img/info_chees/Photo_men.png" alt="men">
-											</div>
-											<div class="infochees-inform__Vector-small">
-												<img src=".//img/info_chees/Vector_small.png" alt="vector-small">
-											</div>
-											<div class="infochees-inform__black-horse">
-												<img src=".//img/info_chees/Black_horse.png" alt="Black-horse">
-											</div>
-											<div class="infochees-inform__arm">
-												<img src=".//img/info_chees/Arm.png" alt="rm">
-											</div>
-										</div>
-										<div class="infochees-inform__content">
-											<div class="infochees-inform__title">и Сеанс <span>одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</div>
-											<table class="infochees-inform__table">
-												<tr>
-													<td class="infochees-inform__first-column">Место проведения:</td>
-													<td class="infochees-inform__second-column">Клуб «Картонажник»</td>
-												</tr>
-												<tr>
-													<td class="infochees-inform__first-column">Дата и время мероприятия:</td>
-													<td class="infochees-inform__second-column">22 июня 1927 г. в 18:00</td>
-												</tr>
-												<tr>
-													<td class="infochees-inform__first-column">Стоимость входных билетов:</td>
-													<td class="infochees-inform__second-column">20 коп.</td>
-												</tr>
-												<tr>
-													<td class="infochees-inform__first-column">Плата за игру:</td>
-													<td class="infochees-inform__second-column">50 коп.</td>
-												</tr>
-												<tr>
-													<td class="infochees-inform__first-column">Взнос на телеграммы:</td>
-													<td class="infochees-inform__second-column"><span>100 руб.</span> 21 руб. 16 коп.</td>
-												</tr>
-											</table>
-											<div class="infochees-inform__top">По всем вопросам обращаться в администрацию к К. Михельсону</div>
-										</div>
-									</div>
-							</div>
-							</div>
-							<div class="inform-section__stages stages-inform">
-								<div class="stages-inform__container">
-									<div class="stages-inform__title">Этапы преображения Васюков <span>Будущие источники <br>обогащения васюкинцев</br></span></div>
-									<div class="grid">
-										<div class="grid__body">
-											<div class="grid__item grid__item-1">
-												<div class="grid__circle">
-													<span>1</span>
-												</div>
-												<span>Строительство железнодорожной магистрали Москва-Васюки</span>
-											</div>								
-											<div class="grid__item grid__item-2">
-												<div class="grid__circle">
-													<span>2</span>
-												</div>
-												<span>Открытие фешенебельной гостиницы «Проходная пешка» b других небоскрёбов</span>
-											</div>								
-											<div class="grid__item grid__item-3">
-												<div class="grid__circle">
-													<span>3</span>
-												</div>
-												<span>Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</span>
-											</div>								
-											<div class="grid__item grid__item-4">
-												<div class="grid__circle">
-													<span>4</span>
-												</div>
-												<span>Строительство дворца для турнира</span>
-											</div>								
-											<div class="grid__item grid__item-5">
-												<div class="grid__circle">
-													<span>5</span>
-												</div>
-												<span>Размещение гаражей для гостевого автотранспорта</span>
-											</div>								
-											<div class="grid__item grid__item-6">
-												<div class="grid__circle">
-													<span>6</span>
-												</div>
-												<span>Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов</span>
-											</div>								
-											<div class="grid__item grid__item-7">
-												<div class="grid__circle">
-													<span>7</span>
-												</div>
-												<span>Создание аэропорта «Большие Васюки» <p>с регулярным отправлением почтовых</p> <p>самолётов и дирижаблей во все концы</p> света, включая Лос-Анжелос и Мельбурн</span>
-											</div>
-										</div>								
-									</div>
-									<div class="stages-inform__image">
-										<img src=".//img/Plane.png" alt="Plane">
-									</div>
-								</div>
-							</div>
+							</div>						
 						</div>
 					</div>
 				</section>
-				<div class="page__participants participants">
+				<section class="page__infochees infochees">
+					<div class="infochees__container">
+							<div class="infochees__body">
+								<div class="infochees__images">
+									<div class="infochees__cooper">
+										<img src="img/info_chees/Cooper.png" alt="cooper">
+									</div>
+									<div class="infochees__nominale">
+										<img src="img//info_chees/nominale.png" alt="nominale">
+									</div>
+									<div class="infochees__Vector-big">
+										<img src="img/info_chees/Vector_big.png" alt="vector-big">
+									</div>
+									<div class="infochees__men">
+										<img src="img/info_chees/Photo_men.png" alt="men">
+									</div>
+									<div class="infochees__Vector-small">
+										<img src="img/info_chees/Vector_small.png" alt="vector-small">
+									</div>
+									<div class="infochees__black-horse">
+										<img src="img/info_chees/Black_horse.png" alt="Black-horse">
+									</div>
+									<div class="infochees__arm">
+										<img src="img/info_chees/Arm.png" alt="rm">
+									</div>
+								</div>
+								<div class="infochees__content">
+									<div class="infochees__title">и Сеанс <span>одновременной игры в шахматы на 160 досках</span> гроссмейстера О. Бендера</div>
+									<table class="infochees__table">
+										<tr>
+											<td class="infochees__first-column">Место проведения:</td>
+											<td class="infochees__second-column">Клуб «Картонажник»</td>
+										</tr>
+										<tr>
+											<td class="infochees__first-column">Дата и время мероприятия:</td>
+											<td class="infochees__second-column">22 июня 1927 г. в 18:00</td>
+										</tr>
+										<tr>
+											<td class="infochees__first-column">Стоимость входных билетов:</td>
+											<td class="infochees__second-column">20 коп.</td>
+										</tr>
+										<tr>
+											<td class="infochees__first-column">Плата за игру:</td>
+											<td class="infochees__second-column">50 коп.</td>
+										</tr>
+										<tr>
+											<td class="infochees__first-column">Взнос на телеграммы:</td>
+											<td class="infochees__second-column"><span>100 руб.</span> 21 руб. 16 коп.</td>
+										</tr>
+									</table>
+									<div class="infochees__top">По всем вопросам обращаться в администрацию к К. Михельсону</div>
+								</div>
+							</div>
+					</div>
+				</section>
+				<section class="page__stages stages">
+					<div class="stages__container">
+						<div class="stages__title">Этапы преображения Васюков <span>Будущие источники <p>обогащения васюкинцев</p></span></div>
+						<div class="stages__items">
+								<div class="stages__item stages__item-1">
+								<div class="stages__body">
+									<div class="stages__circle">
+											<span>1</span>
+										</div>
+										<span>Строительство железнодорожной магистрали Москва-Васюки</span>
+									</div>
+								</div>								
+						</div>
+						<div class="stages__image">
+							<img src="img/Plane.png" alt="Plane">
+						</div>
+					</div>
+				</section>
+				<section class="page__participants participants">
 					<div class="participants__container">
 						<div class="participants__top">
 							<div class="participants__title">Участники турнира</div>
@@ -171,6 +146,9 @@
 								<div class="swiper-button-prev">
 									<img src="@img/navigation/Arrow_prev.svg" alt="prev">
 								</div>
+								<!---Отображение нумерции слайдеров--->
+								
+
 								<div class="swiper-button-next">
 									<img src="@img/navigation/Arrow_next.svg" alt=""></div>			
 							</div>
@@ -181,7 +159,7 @@
 								<div class="participants-slider__slide swiper-slide">
 										<div class="participants-slide__body">
 											<div class="participants-slide__photo">
-												<img src=".//img//man_playing_chess_old_photo.png" alt="Photo">
+												<img src="@img/man_playing_chess_old_photo.png" alt="Photo">
 											</div>
 											<div class="participants-slide__title">Хозе-Рауль Капабланка</div>
 											<div class="participants-slide__description">Чемпион мира по шахматам</div>
@@ -191,7 +169,7 @@
 								<div class="participants-slider__slide swiper-slide">
 										<div class="participants-slide__body">
 											<div class="participants-slide__photo">
-												<img src=".//img//man_playing_chess_old_photo.png" alt="Photo">
+												<img src="@img/man_playing_chess_old_photo.png" alt="Photo">
 											</div>
 											<div class="participants-slide__title">Эммануил Ласкер</div>
 											<div class="participants-slide__description">Чемпион мира по шахматам</div>
@@ -201,7 +179,7 @@
 								<div class="participants-slider__slide swiper-slide">
 										<div class="participants-slide__body">
 											<div class="participants-slide__photo">
-												<img src=".//img//man_playing_chess_old_photo.png" alt="Photo">
+												<img src="@img/man_playing_chess_old_photo.png" alt="Photo">
 											</div>
 											<div class="participants-slide__title">Александр Алехин</div>
 											<div class="participants-slide__description">Чемпион мира по шахматам</div>
@@ -211,7 +189,7 @@
 								<div class="participants-slider__slide swiper-slide">
 										<div class="participants-slide__body">
 											<div class="participants-slide__photo">
-												<img src=".//img//man_playing_chess_old_photo.png" alt="Photo">
+												<img src="@img/man_playing_chess_old_photo.png" alt="Photo">
 											</div>
 											<div class="participants-slide__title">Александр Алехин</div>
 											<div class="participants-slide__description">Чемпион мира по шахматам</div>
@@ -221,7 +199,7 @@
 								<div class="participants-slider__slide swiper-slide">
 										<div class="participants-slide__body">
 											<div class="participants-slide__photo">
-												<img src=".//img//man_playing_chess_old_photo.png" alt="Photo">
+												<img src="@img/man_playing_chess_old_photo.png" alt="Photo">
 											</div>
 											<div class="participants-slide__title">Александр Алехин</div>
 											<div class="participants-slide__description">Чемпион мира по шахматам</div>
@@ -231,7 +209,7 @@
 								<div class="participants-slider__slide swiper-slide">
 										<div class="participants-slide__body">
 											<div class="participants-slide__photo">
-												<img src=".//img//man_playing_chess_old_photo.png" alt="Photo">
+												<img src="@img/man_playing_chess_old_photo.png" alt="Photo">
 											</div>
 											<div class="participants-slide__title">Александр Алехин</div>
 											<div class="participants-slide__description">Чемпион мира по шахматам</div>
@@ -239,13 +217,9 @@
 											</div>
 								</div>								
 							</div>
-
-							<!-- <div class="swiper-button-prev"></div>
-							<div class="swiper-button-next"></div> -->
-
 						</div>
 					</div>
-				</div>
+				</section>
 			</main>
 			@@include('html/_footer.htm',{})
 		</div>

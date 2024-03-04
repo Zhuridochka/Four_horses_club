@@ -606,36 +606,36 @@
 // 	margin-bottom: toRem(200);
 	
 // 		&__container {
-// 			position: relative;
-// 			max-width: 76.375rem;
-// 			height: 100%;
+			// position: relative;
+			// max-width: 76.375rem;
+			// height: 100%;
 // 		}
 
 // 		&__title {
-// 			font-family: 'Merriweather';
-// 			text-transform: uppercase;
-// 			font-size: 3.375rem;
-// 			line-height: 120%;
-// 			max-width: 50.375rem;
-// 			margin-bottom: toRem(54);
+			// font-family: 'Merriweather';
+			// text-transform: uppercase;
+			// font-size: 3.375rem;
+			// line-height: 120%;
+			// max-width: 50.375rem;
+			// margin-bottom: toRem(54);
 // 		}
 
-// 		&__title span {
-// 			display: inline-block;
-// 			font-family: "Golos Text";
-// 			font-size: 1.25rem;
-// 			line-height: 120%;
-// 			text-transform: none;
-// 			margin-left: 1rem;
-// 			color: $blueColor;
-// 		}
+		// &__title span {
+		// 	display: inline-block;
+		// 	font-family: "Golos Text";
+		// 	font-size: 1.25rem;
+		// 	line-height: 120%;
+		// 	text-transform: none;
+		// 	margin-left: 1rem;
+		// 	color: $blueColor;
+		// }
 
 // 		.grid {
-// 			font-family: $fontFamily;
-// 			line-height: 120%;
-// 			font-size: 1.25rem;
-// 			display: grid;
-// 			grid-template: repeat(3, 112px) / repeat(3, 394px);
+			// font-family: $fontFamily;
+			// line-height: 120%;
+			// font-size: 1.25rem;
+			// display: grid;
+			// grid-template: repeat(3, 112px) / repeat(3, 394px);
 
 // 			&__body {
 // 				display: flex;
@@ -646,31 +646,31 @@
 // 			}
 	
 // 			&__item {
-// 				background-color: #F0E1CF;
-// 				display: flex;
-// 				align-items: flex-start;					
+				// background-color: #F0E1CF;
+				// display: flex;
+				// align-items: flex-start;					
 // 			}
 
-// 			&__item span {
-// 				font-weight: 500;
-// 			}
+			// &__item span {
+			// 	font-weight: 500;
+			// }
 
 	
 // 			&__circle {
-// 				padding: 1.25rem;
-// 				max-width: 2.25rem;
-// 				max-height: 2.25rem;
-// 				border-radius: 50%;
-// 				background-color: #fff;
-// 				display: flex;
-// 				justify-content: center;
-// 				align-items: center;
-// 				margin-right: 0.625rem;
+				// padding: 1.25rem;
+				// max-width: 2.25rem;
+				// max-height: 2.25rem;
+				// border-radius: 50%;
+				// background-color: #fff;
+				// display: flex;
+				// justify-content: center;
+				// align-items: center;
+				// margin-right: 0.625rem;
 // 			}
 
-// 			&__circle span {
-// 				font-weight: 600;
-// 			}	
+			// &__circle span {
+			// 	font-weight: 600;
+			// }	
 
 // 			&__item-1 {
 // 				margin-right: 1.25rem;
@@ -683,8 +683,8 @@
 // 			}	
 			
 // 			&__item-3 {
-// 				grid-row-start: span 2;
-// 				margin-bottom: 1.25rem;
+				// grid-row-start: span 2;
+				// margin-bottom: 1.25rem;
 // 			}
 // 			&__item-4 {
 // 				margin-right: 1.25rem;
@@ -695,12 +695,12 @@
 // 				margin-bottom: 1.25rem;
 // 			}
 // 			&__item-6 {
-// 				max-height: 8.5rem;
-// 				margin-right: 1.25rem;
+				// max-height: 8.5rem;
+				// margin-right: 1.25rem;
 // 			}
 // 			&__item-7 {
-// 				grid-column-start: span 2;
-// 				max-height: 8.5rem;
+				// grid-column-start: span 2;
+				// max-height: 8.5rem;
 // 			}
 // 		}
 
@@ -1225,32 +1225,177 @@
 			color: $blueColor;
 		}
 	}
-	.stages {
-	
+
+
+.stages {
+	margin-bottom: toRem(200);
+
 		&__container {
+			position: relative;
+			max-width: 76.375rem;
+			height: 100%;
 		}
-	
+
 		&__title {
+			font-family: 'Merriweather';
+			text-transform: uppercase;
+			font-size: 3.375rem;
+			line-height: 120%;
+			max-width: 50.375rem;
+			margin-bottom: toRem(54);
 		}
-	
+
+		&__title span {
+			display: inline-block;
+			font-family: "Golos Text";
+			font-size: 1.25rem;
+			line-height: 120%;
+			text-transform: none;
+			margin-left: 1rem;
+			color: $blueColor;
+		}
+
 		&__items {
+			font-family: $fontFamily;
+			line-height: 120%;
+			font-size: 1.25rem;
+			display: grid;
+			grid-template: repeat(3, 112px) / repeat(3, 394px);
+			gap: 20px;
 		}
+}
+.items-stages {	
 	
 		&__item {
+			background-color: #F0E1CF;
+			display: flex;
+			align-items: center;
+			justify-content: center;	
 		}
-	
-		&__item-1 {
+
+		&__item span {
+			font-weight: 500;
 		}
-	
+
+		&__item--1 {
+		
+		}
+
 		&__body {
+			display: flex;
+			align-items: center;
+			justify-content: start;
+			padding: 1.25rem;
 		}
-	
+
 		&__circle {
+			padding: 20px;
+			max-width: 2.25rem;
+			max-height: 2.25rem;
+			border-radius: 50%;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 0.625rem;
 		}
-	
+
+		&__circle span {
+			font-weight: 600;
+		}	
+
+		&__text {
+
+		}		
+
+		&__item--2 {
+
+		}
+
+		&__item--3 {
+			grid-row-start: span 2;
+		
+		}
+
+		&__item--4 {
+
+		}
+
+		&__item--5 {
+
+		}
+
+		&__item--6 {
+
+		}
+
+		&__item--7 {
+			grid-column-start: span 2;
+		
+		}
+
 		&__image {
 		}
+}
+ /*=================================*/
+ .page {
+
+	&__stages {
 	}
+}
+.stages {
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__items {
+	}
+}
+.items-stages {
+
+	&__item {
+	}
+
+	&__item--1 {
+	}
+
+	&__body {
+	}
+
+	&__circle {
+	}
+
+	&__text {
+	}
+
+	&__item--2 {
+	}
+
+	&__item--3 {
+	}
+
+	&__item--4 {
+	}
+
+	&__item--5 {
+	}
+
+	&__item--6 {
+	}
+
+	&__item--7 {
+	}
+
+	&__image {
+	}
+}
+
+
+ /*=================================*/
+
 	.participants {
 		margin-bottom: 8.75rem;
 		display: flex;

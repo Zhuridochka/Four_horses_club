@@ -57,30 +57,30 @@ function initSliders() {
 			*/
 
 			// Пагінація
-			/*
+			
 			pagination: {
 				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
+				// clickable: true,
 
-			// Скроллбар
-			/*
+					//Фракции 
+				type: 'fraction',
+			},
+			
+			// Скроллбар			
 			scrollbar: {
 				el: '.swiper-scrollbar',
 				draggable: true,
 			},
-			*/
-
+			
 			// Кнопки "вліво/вправо"
 			navigation: {
 				prevEl: '.swiper-button-prev',
 				nextEl: '.swiper-button-next',
 			},
-			/*
+			
 			// Брейкпоінти
 			breakpoints: {
-				640: {
+				320: {
 					slidesPerView: 1,
 					spaceBetween: 0,
 					autoHeight: true,
@@ -89,16 +89,16 @@ function initSliders() {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				992: {
+				1222: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
+				// 1268: {
+				// 	slidesPerView: 4,
+				// 	spaceBetween: 30,
+				// },
 			},
-			*/
+			
 			// Події
 			on: {
 
@@ -139,5 +139,5 @@ window.addEventListener("load", function (e) {
 	// Запуск ініціалізації слайдерів
 	initSliders();
 	// Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-	//initSlidersScroll();
+	initSlidersScroll();
 });

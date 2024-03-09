@@ -1,0 +1,884 @@
+//====================================================================================================
+
+.page {
+
+	&__main {		
+	}
+
+	&__inform, 
+	&__infochees, 
+	&__stages,
+	&__participants, {
+		display: block;
+		@media (min-width: 1366px) {
+			display: none; // Скрываем section при ширине экрана больше 1367 пикселей		
+		} 
+	}
+
+	&__infochees {
+	}
+
+	&__stages {
+	}
+
+	&__participants {
+	}
+}
+//====================================================================================================
+
+@media (min-width: 1366px) {
+	.main { 
+		position: relative;
+		background-color: #E9DED4;
+		height: 700px;
+	
+				&__container {
+					position: relative;
+					height: 100%;
+				}
+		 
+				&__logo {
+					margin-left: 13.125rem;
+					padding: 26px 0px 0px 0px;
+				}
+		 
+				&__content {
+					width: 542px;
+					margin-left: 13.125rem;
+					margin-bottom: 190px;
+					margin-top: 60px;
+					// background: url('../img/main_page/BG_image_23.png') center 0 no-repeat;
+				}
+		 
+				&__title {
+					font-family: 'Merriweather';
+					font-size: toRem(60);
+					font-weight: 400;
+					text-transform: uppercase;
+					line-height: 110%;
+
+				}
+		 
+				&__text {
+					margin-top: 25px;
+					margin-left: -2px;
+					font-family: Montserrat;
+					font-size: 18px;
+					font-weight: 500;
+					line-height: 130%;
+					text-align: center;
+				}
+	
+				.three {   
+					 &__line {
+						 padding-left: 5.625rem;
+					 }
+				}
+				.four {      
+					 &__line {
+							padding-left: 2rem;
+					 }
+				}
+	
+				&__actions {
+					display: flex;
+					gap: 16px;
+					margin-top: 40px;
+					margin-left: -3px;
+					font-family: 'Montserrat';
+					font-weight: 600;
+				 }
+
+				&__ibg {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					z-index: -3;
+					opacity: 0.5;
+				}
+	
+				.images {
+					position: absolute;
+					overflow: hidden;
+					z-index: -1;
+					width: 100%;
+					height: 100%;
+					bottom: 0;
+					right: 5px;
+	
+				&__image-ellipse {
+					position: absolute;
+					max-width: 100%;
+					max-height: 100%;
+					top: 0;
+					right: 86px;
+						img {
+							position: absolute;
+							top: 0;
+							right: 100px;
+						}  
+				} 
+					
+				&__image-ellipsname {
+					position: absolute;
+					max-width: 100%;
+					max-height: 100%;
+					top: 0;
+					right: 65px;
+						img {
+							position: absolute;
+							top: 0;
+							right: 61px;
+						}
+				}
+	
+				&__image-chessquin {
+						position: absolute;
+						max-width: 100%;
+						max-height: 100%;
+						top: 136px;
+						right: 298px;
+						img {
+							position: absolute;
+							top: 136px;
+							right: 360px;
+						}
+				}
+	
+				&__image-chessking {
+						position: absolute;
+						max-width: 100%;
+						max-height: 100%;
+						top: 85px;
+						right: 195px;
+						img {
+							position: absolute;
+							top: 80px;
+							right: 110px;
+						}
+				}
+	
+				&__image-city {
+						position: absolute;
+						max-width: 100%;
+						max-height: 100%;
+						right: 41px;
+						bottom: 0;
+						img {
+							position: absolute;
+							right: -35px;
+							bottom: 0;
+						}
+				}
+	
+				&__image-path {
+					position: absolute;
+					max-width: 100%;
+					max-height: 100%;
+					bottom: 0;
+					right: 29px;
+					img {
+						position: absolute;
+						bottom: 0;
+						right: 0;
+					}
+			}
+	
+			&__image-vector {
+					position: absolute;
+					max-width: 100%;
+					max-height: 100%;
+					bottom: 0px;
+					right: -2px;
+					img {
+						position: absolute;
+						bottom: 0px;
+						right: 0;
+					}
+			}
+	
+				&__image-chesssmall {
+						position: absolute;
+						max-width: 100%;
+						max-height: 100%;
+						bottom: 21px;
+						right: 192px;
+						img{
+							position: absolute;
+							bottom: 0;
+							right: 0;
+						}
+				}
+	
+				&__image-chesshorse {
+						position: absolute;
+						max-width: 100%;
+						bottom: 3px;
+						right: 482px;
+						img{
+							position: absolute;
+							bottom: 0;
+							right: 0;
+					}
+			}
+		}
+	}
+}
+/*========================================*/
+
+@media (max-width: 1366px) {
+	.main {
+		position: relative;
+		width: 100%;
+		height: 700px;
+		background: url('../img/main_page/BG_image_23.png') center 0 no-repeat;
+		background-color: #E9DED4;
+		
+		&__container {
+			max-width: 76.375rem;
+			margin: 0 auto;
+			padding: 0 0.9375rem;
+			position: relative;
+			height: 100%;
+		}
+	
+		&__logo {
+			padding: 26px 0px 0px 0px;
+		}
+	
+		&__images {
+		}
+	
+		&__content {
+			max-width: 33.875rem;
+			margin-bottom: 8.375rem;
+			margin-top: 3.75rem;
+		}
+	
+		&__title {
+			font-family: 'Merriweather';
+			font-size: toRem(60);
+			font-weight: 400;
+			text-transform: uppercase;
+			line-height: 110%;
+		}
+	
+		&__text {
+			margin-top: 1.5625rem;
+			margin-left: -0.125rem;
+			font-family: Montserrat;
+			font-size: 1.125rem;
+			font-weight: 500;
+			line-height: 130%;
+			text-align: center;
+		}
+	
+		&__actions {
+			display: flex;
+			gap: 1rem;
+			margin-top: 2.5rem;
+			font-family: 'Montserrat';
+			font-weight: 600;
+		}
+	
+		&__button {
+		}
+	}
+
+	.images-main {
+		position: absolute;
+		overflow: hidden;
+		z-index: -1;
+		width: 97.875rem;
+		height: 100%;
+		bottom: 0;
+		right: -13.75rem;
+		transition: all 0.3 ease;
+		@media (max-width: 1190px) {
+			opacity: 0.5;
+		}
+	
+		&__image-ellipse {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			top: 0;
+			right: 5.375rem;
+				img {
+					position: absolute;
+					top: 0;
+					right: 6.25rem;
+				}  
+		}
+	
+		&__image-ellipsname {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			top: 0;
+			right: 4.0625rem;
+				img {
+					position: absolute;
+					top: 0;
+					right: 3.8125rem;
+				}
+		}
+	
+		&__image-chessquin {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			top: 8.5rem;
+			right: 18.625rem;
+			img {
+				position: absolute;
+				top: 8.5rem;
+				right: 22.5rem;
+			}
+		}
+	
+		&__image-chessking {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			top: 5.3125rem;
+			right: 12.1875rem;
+			img {
+				position: absolute;
+				top: 5rem;
+				right: 6.875rem;
+			}
+		}
+	
+		&__image-city {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			right: 2.5625rem;
+			bottom: 0;
+			img {
+				position: absolute;
+				right: -2.1875rem;
+				bottom: 0;
+			}
+		}
+	
+		&__image-path {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			bottom: 0;
+			right: 1.8125rem;
+			img {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	
+		&__image-vector {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			bottom: 0;
+			right: -0.125rem;
+			img {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	
+		&__image-chesssmall {
+			position: absolute;
+			bottom: 1.3125rem;
+			right: 192px;
+			max-width: 100%;
+			max-height: 100%;
+			img {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	
+		&__image-chesshorse {
+			position: absolute;
+			bottom: 0.1875rem;
+			right: 30.125rem;
+			max-width: 100%;
+			max-height: 100%;
+			img {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+			}
+		}
+	}
+	.three {
+	
+		&__line {
+			padding-left: 5.625rem;
+		}
+	}
+	.four {
+	
+		&__line {
+			padding-left: 2rem;
+		}
+	}
+	.inform {
+	
+		&__container {
+			max-width: 76.375rem;
+			margin: 0 auto;
+			padding: 0 0.9375rem;
+		}
+	
+		&__body {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 5rem;
+		}
+		@media (max-width: 830px) {
+			&__body {
+				flex-wrap: wrap;	
+			}	
+		}
+	
+		&__text {
+			font-family: 'Merriweather';
+			font-size: toRem(36);
+			font-weight: 400;
+			text-transform: uppercase;
+			line-height: 135%;
+			flex: 0 0 62.520458%;  /* 764/1222 */
+			@include adaptiveValue("font-size", 36, 28);
+		}
+
+		&__text span {
+			color: $redColor;
+		}	
+	
+		&__image {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+	.infochees {
+		margin-top: toRem(64);
+		margin-bottom: toRem(200);
+	
+		&__container {
+			max-width: 1222px;
+			margin: 0 auto;
+			padding: 0 0.9375rem;
+		}
+	
+		&__body {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 44px;
+		}
+
+		@media (max-width: 830px) {
+			&__body {
+				flex-wrap: wrap;	
+			}	
+		}
+
+	.infochees {
+		&__images {
+			flex: 0 1 38.788871%; /* 474/1222 */
+			height: 527px;
+			position: relative;
+
+			// @include adaptiveValue("height", 527, 402);
+		}
+
+		@media (max-width: 830px) {
+			&__images {
+				flex: 1 1 100%;
+				position: relative;
+			
+		}
+	}
+}
+
+	.images {
+		margin-bottom: toRem(30px);
+			&__cooper {
+				position: absolute;
+				top: 40px;
+				left: 1.375rem;
+				img {
+					max-width: 100%;
+				}
+			}
+	
+			&__nominale {
+				position: absolute;
+				top: 22px;
+				right: 0;
+				img {
+					max-width: 100%;
+				}
+			}
+	
+			&__Vector-big {
+				position: absolute;
+				top: -27px;
+				right: -27px;
+				img {
+					max-width: 100%;
+				}
+			}
+	
+			&__men {
+				position: absolute;
+				top: 88px;
+				right: 60px;
+				img {
+					max-width: 100%;
+				}
+			}
+	
+			&__Vector-small {
+				position: absolute;
+				bottom: 17px;
+				left: -15px;
+				img {
+					max-width: 100%;
+				}
+			}
+	
+			&__black-horse {
+				position: absolute;
+				bottom: 0.3125rem;
+				left: 3.9375rem;
+				img {
+					max-width: 100%;
+				}
+			}
+	
+			&__arm {
+				position: absolute;
+				bottom: -94px;
+				right: 0;
+				img {
+					max-width: 100%;
+				}
+			}
+	}
+		
+		&__content {
+			flex: 0 1 57.610475%; /* 704/1222 */
+			display: flex;
+			flex-direction: column;
+		}
+
+		@media (max-width: 830px) {
+			&__content {
+				flex: 0 auto;
+		}
+	}
+	
+		&__title {
+			font-family: 'Merriweather';
+			line-height: 135%;
+			font-size: 36px;
+			text-transform: uppercase;
+
+			@include adaptiveValue("font-size", 36, 28);
+		}
+
+		&__title span {
+			color: $redColor;
+			font-weight: 700;
+		}
+
+		&__title:not(:last-child){
+			margin-bottom: toRem(44);
+		}
+	
+		&__table {
+			border-collapse: collapse; // Убираем внешние границы между ячейками
+			width: 100%; // Ширина таблицы
+		}
+
+		&__table:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+
+		&__table td {
+			border-bottom: 2px solid #D0D0D0; // Органичительная линия для ячеек
+			padding: toRem(16);
+		}
+		&__table tr {
+			border: none;
+		}
+	
+		&__first-column {
+			border-right: 2px solid #D0D0D0;
+			color: $mainColor;
+			font-weight: normal;
+		}
+	
+		&__second-column {
+			font-weight: 600;
+		}
+
+		&__second-column span {
+			text-decoration: line-through;
+			text-decoration-color: $redColor;
+		}
+	
+		&__top {
+			line-height: 120%;
+			color: $blueColor;
+		}
+	}
+
+.stages {
+	margin-bottom: toRem(200);
+
+		&__container {
+			position: relative;
+			max-width: 1222px;
+			height: 100%;
+		}
+
+		&__title {
+			font-family: 'Merriweather';
+			text-transform: uppercase;
+			font-size: 3.375rem;
+			line-height: 120%;
+			max-width: 50.375rem;
+			margin-bottom: toRem(54);
+		}
+
+		&__title span {
+			display: inline-block;
+			font-family: "Golos Text";
+			font-size: 1.25rem;
+			line-height: 120%;
+			text-transform: none;
+			margin-left: 1rem;
+			color: $blueColor;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		&__items {
+			font-family: $fontFamily;
+			line-height: 120%;
+			font-size: 1.25rem;
+			display: grid;
+			grid-template-rows: 112px 112px 136px;
+			grid-template-columns: repeat(3, 394px);
+			gap: 20px;
+		}
+}
+.items-stages {	
+	
+		&__item {
+			background-color: #F0E1CF;
+			display: flex;
+			align-items: flex-start;
+			justify-items: stretch;	
+		}
+
+		&__item span {
+			font-weight: 500;
+		}
+
+		&__item--1 {
+		}
+
+		&__body {
+			display: flex;
+			padding: 1.25rem;
+		}
+
+		&__circle {
+			padding: 20px;
+			max-width: 2.25rem;
+			max-height: 2.25rem;
+			border-radius: 50%;
+			background-color: #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 0.625rem;
+		}
+
+		&__circle span {
+			font-weight: 600;
+		}	
+
+		&__text {
+			flex-grow: 1;
+		}		
+
+		&__item--2 {
+		}
+
+		&__item--3 {
+			grid-row-start: span 2;		
+		}
+
+		&__item--4 {
+		}
+
+		&__item--5 {
+		}
+
+		&__item--6 {
+		}
+
+		&__item--7 {
+			grid-column-start: span 2;		
+		}
+
+		&__image {
+			max-width: 100%;
+			position: absolute;
+			right: -3.5625rem;
+			bottom: -1.75rem;
+
+		}
+}
+ /*=================================*/
+
+	.participants {
+		margin-bottom: 8.75rem;
+		display: flex;
+		gap: 30px;
+	
+		&__container {
+			max-width: 1222px;
+			min-width: 0;
+		}
+	
+		&__top {
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 60px;
+		}
+	
+		&__title {
+			font-family: 'Merriweather';
+			font-size: toRem(54);
+			line-height: 120%;
+		}
+	
+		&__navigation {
+			display: flex;
+			gap: 15px;
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		width: 44px;
+		height: 44px;
+		background: #313131;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		img {
+			font-size: 16px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		@media (any-hover:hover) {
+			&:hover {
+				background: #FBCE51;
+			}
+		}
+	
+		&.swiper-button-disabled {
+			background: #D6D6D6;
+		}
+}
+	.participants-slider {
+	
+		&__wrapper {
+		}
+	
+		&__slide {
+		}
+	}
+	.swiper-container {
+	}
+	.swiper-wrapper {
+	}
+	.swiper-slide {
+	}
+	.participants-slide {
+	
+		&__body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	
+		&__photo {
+			max-width: 100%;
+			position: relative;
+			width: 320px;
+			height: 320px;
+			margin-bottom: 28px;		
+			img {
+				max-width: 100%;
+				border-radius: 50%;
+			}
+		}
+	
+		&__title {
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 120%;
+			margin-bottom: 6px;
+		}
+	
+		&__description {
+			color: #838383;
+			margin-bottom: 20px;
+		}
+	
+		&__button {
+			display: flex;
+			border: 2px solid $blueColor;
+			border-radius: 62px;
+			padding: 12px;
+			position: relative;
+			font-size: 16px;
+			font-weight: 500;
+			color: $blueColor;
+			line-height: 120%;
+			justify-content: center;
+
+			@media (any-hover: hover) {
+				&:hover {
+					background: $blueColor;
+					color: #fff;
+				}
+			}
+ 		}
+	}
+}
+
+
+

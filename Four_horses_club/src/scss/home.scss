@@ -344,10 +344,12 @@
 			align-items: center;
 			justify-content: space-between;
 			margin-top: 5rem;
-			@media (max-width: 830px) {
-				flex-direction: column;
-			}
-		}	
+		}
+		@media (max-width: 830px) {
+			&__body {
+				flex-wrap: wrap;	
+			}	
+		}
 	
 		&__text {
 			font-family: 'Merriweather';
@@ -357,29 +359,9 @@
 			line-height: 135%;
 			flex: 0 0 62.520458%;  /* 764/1222 */
 			@include adaptiveValue("font-size", 36, 28);
-			@media (max-width: 830px) {
-				display: none;
-			}
 		}
 
 		&__text span {
-			font-weight: bold;
-		}
-
-		&__text-575 {
-			font-family: 'Merriweather';
-			font-size: toRem(36);
-			font-weight: 400;
-			text-transform: uppercase;
-			line-height: 135%;
-			flex: 0 0 62.520458%;  /* 764/1222 */
-			
-			@media (min-width: 829px) {
-				display: none;
-			}
-		}
-
-		&__text-575 span {
 			color: $redColor;
 		}	
 	
@@ -387,15 +369,6 @@
 			img {
 				max-width: 100%;
 			}
-			@media (max-width: 829px) {
-				display: none;
-			}
-		}
-
-		&__image-575 {
-			display: flex;
-			justify-content: center;
-			margin: 23px 0;
 		}
 	}
 
@@ -434,8 +407,7 @@
 		@media (max-width: 830px) {
 			&__images {
 				flex: 1 1 100%;
-				position: relative;
-			
+				position: relative;			
 		}
 	}
 }

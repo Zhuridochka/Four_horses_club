@@ -25,43 +25,37 @@
 	}
 }
 //====================================================================================================
-
+/*=====Ширина экрана больше 1366px=====*/
 @media (min-width: 1366px) {
 
 .main {
-	position: relative;
-	background: url('../img/main_page/BG_image_23.png') 0 0/cover no-repeat;
-		background-color: #E9DED4;
+		position: relative;
+		width: 100%;
+		background: url('../img/main_page/BG_image_23.png') 0 0/cover no-repeat;
+		background-color: #E9DED4;		
 
 		&__container {
-			display: flex;
-			min-height: 700px;
+			position: relative;
+			height: 100%;
 		}
 
 		&__logo {
-			padding-bottom: toRem(65);
-			height: auto;
-			display: block;
+			padding: 26px 0px 62px 0px;
 		}
 
-		&__images {		
-			position: absolute;
-			top: 0; 
-			right: 0;
+		&__images {	
 		}
 
 		&__content {
 			display: flex;
 			flex-direction: column;
-			flex: 0 1 50%;
-			padding-top: toRem(16);
-			padding-left: toRem(191);
-			padding-bottom: toRem(132);			
+			max-width: 542px;
+			padding-bottom: toRem(132);		
+			@include adaptiveValue("margin-left", 191, 0, 0, 1920, 1366);	
 		}
 
 		&__title {
 			display: inline-block;
-			width: 542px;
 			font-family: 'Merriweather';
 			font-size: 60px;			
 			line-height: 110%;
@@ -74,7 +68,6 @@
 
 		&__text {
 			display: inline-block;
-			width: 542px;
 			font-family: 'Montserrat';
 			font-size: 18px;
 			line-height: 120%;
@@ -90,69 +83,85 @@
 			display: flex;
 			gap: 16px;
 		}
-
-		&__button {
-		}
 }
 .images-main {
 	position: absolute;
-	top: 0;
+	overflow: hidden;
+	z-index: -1;
+	width: 1566px;
+	height: 100%;
+	bottom: 0;
 	right: 0;
 
 		&__image-ellipse {
 			position: absolute;
 			top: 0;
-			left: 0;
-			img {
-				max-width: 100%;			
+			right: 186px;
 			}
-		}
 
 		&__image-ellipsname {
+			position: absolute;
+			top: 0;
+			right: 129px;
 		}
 
 		&__image-chessquin {
+			position: absolute;
+			top: 240px;
+			right: 658px;
 		}
 
 		&__image-chessking {
+			position: absolute;
+			max-width: 100%;
+			max-height: 100%;
+			top: 167px;
+			right: 12.1875rem;
 		}
 
 		&__image-city {
+			position: absolute;
+			right: 0px;
+			bottom: 0;
 		}
 
 		&__image-path {
+			position: absolute;
+			bottom: 0;
+			right: 20px;
 		}
 
 		&__image-vector {
+			position: absolute;
+			bottom: 0;
+			right: -2px;
 		}
 
 		&__image-chesssmall {
+			position: absolute;
+			bottom: 1.3125rem;
+			right: 192px;
 		}
 
 		&__image-chesshorse {
+			position: absolute;
+			bottom: 0.1875rem;
+			right: 30.125rem;
 		}
 }
 .three {
-
 		&__line {
 			text-align: center;
 		}
-}
+	}
 .four {
-
 		&__line {
 			text-align: end;
 		}
-}
-.button {
-
-		&_black {
-		}
-}
-
+	}
 }
 /*========================================*/
-
+/*=====Ширина экрана меньше 1366px=====*/
 @media (max-width: 1366px) {
 	.main {
 		position: relative;
@@ -162,7 +171,7 @@
 		background-color: #E9DED4;
 		
 		&__container {
-			max-width: 76.375rem;
+			max-width: 1222px;
 			margin: 0 auto;
 			padding: 0 0.9375rem;
 			position: relative;
@@ -184,8 +193,8 @@
 			display: flex;
 			flex-direction: column;
 			max-width: 542px;
-			padding-bottom: 8.375rem;
-			padding-top: 3.75rem;
+			padding-bottom: 132px;
+			padding-top: 16px;
 
 			@media (max-width: 575px) {
 				width: 335px;
@@ -228,149 +237,81 @@
 				align-items: center;
 			}
 		}
-	
-		&__button {
-		}
 	}
 
 	.images-main {
 		position: absolute;
 		overflow: hidden;
 		z-index: -1;
-		width: 97.875rem;
+		width: 1566px;
 		height: 100%;
 		bottom: 0;
 		right: -13.75rem;
 		transition: all 0.3 ease;
-		@media (max-width: 1190px) {
-			opacity: 0.5;
+		@media (max-width: 1100px) {
+			opacity: 0.7;
 		}
 	
 		&__image-ellipse {
-			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
+			position: absolute;	
 			top: 0;
 			right: 5.375rem;
-				img {
-					position: absolute;
-					top: 0;
-					right: 6.25rem;
-				}  
 		}
 	
 		&__image-ellipsname {
-			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
+			position: absolute;	
 			top: 0;
-			right: 4.0625rem;
-				img {
-					position: absolute;
-					top: 0;
-					right: 3.8125rem;
-				}
+			right: 29px;
 		}
 	
 		&__image-chessquin {
 			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
 			top: 8.5rem;
 			right: 18.625rem;
-			img {
-				position: absolute;
-				top: 8.5rem;
-				right: 22.5rem;
-			}
 		}
 	
 		&__image-chessking {
 			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
 			top: 5.3125rem;
-			right: 12.1875rem;
-			img {
-				position: absolute;
-				top: 5rem;
-				right: 6.875rem;
-			}
+			right: 12.1875rem;	
 		}
 	
 		&__image-city {
 			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
-			right: 2.5625rem;
+			right: 0px;
 			bottom: 0;
-			img {
-				position: absolute;
-				right: -2.1875rem;
-				bottom: 0;
-			}
 		}
 	
 		&__image-path {
 			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
 			bottom: 0;
-			right: 1.8125rem;
-			img {
-				position: absolute;
-				bottom: 0;
-				right: 0;
-			}
+			right: 20px;
 		}
 	
 		&__image-vector {
 			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
 			bottom: 0;
-			right: -0.125rem;
-			img {
-				position: absolute;
-				bottom: 0;
-				right: 0;
-			}
+			right: -2px;
 		}
 	
 		&__image-chesssmall {
 			position: absolute;
 			bottom: 1.3125rem;
 			right: 192px;
-			max-width: 100%;
-			max-height: 100%;
-			img {
-				position: absolute;
-				bottom: 0;
-				right: 0;
-			}
 		}
 	
 		&__image-chesshorse {
 			position: absolute;
 			bottom: 0.1875rem;
 			right: 30.125rem;
-			max-width: 100%;
-			max-height: 100%;
-			img {
-				position: absolute;
-				bottom: 0;
-				right: 0;
-			}
 		}
 	}
-	.three {
-	
+	.three {	
 		&__line {
 			text-align: center;
 		}
 	}
-	.four {
-	
+	.four {	
 		&__line {
 			text-align: end;
 		}
@@ -415,19 +356,19 @@
 		}
 		
 		@media (max-width: 829px) {
-				&__body {
-					display: flex;
-					flex-direction: column;	
-					align-items: center;
-					justify-content: center;
+			&__body {
+				display: flex;
+				flex-direction: column;	
+				align-items: center;
+				justify-content: center;
 			}	
 
-				&__text-575 {
-					display: flex;
-					flex-direction: column;	
-					align-items: center;
-					justify-content: center;
-				}
+			&__text-575 {
+				display: flex;
+				flex-direction: column;	
+				align-items: center;
+				justify-content: center;
+			}
 
 				&__text-575 p {
 				font-family: 'Merriweather';
@@ -444,13 +385,11 @@
 
 			&__image-575 {
 				margin-bottom: 24px;
-
 				img {
 					max-width: 100%;
 				}
 			}
-		}
-	
+		}	
 	
 		&__image {
 			img {

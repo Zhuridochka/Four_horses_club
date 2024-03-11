@@ -22,6 +22,17 @@
 		}
 	}
 
+	@media (max-width: 1100px) {
+		background-color: #fff;
+		color: #1F1F1F;
+		border: none;
+		opacity: 0.89;
+		// border-radius: 66px;
+		// display: flex;
+		// justify-content: center;
+		// padding: 18px 20px;
+	}
+
 	@media (max-width: 585px) {
 		width: 100%;
 		max-width: 365px;

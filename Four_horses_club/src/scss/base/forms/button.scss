@@ -52,9 +52,9 @@
 		transition: all 0.3s ease 0s;
 		@media (any-hover: hover) {
 			&:hover {
-				border: 1px solid #303030;
+				border: 1px solid $yellowColor;
 				color: #303030;
-				background-color: rgba(46, 49, 51, 0);
+				background-color: $yellowColor;
 			}
 	}
 

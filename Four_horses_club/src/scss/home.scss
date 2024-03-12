@@ -328,7 +328,8 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			margin-top: 5rem;
+			margin-top: toRem(80);
+			@include adaptiveValue("font-size", 80, 48);
 		}
 		
 		&__text {
@@ -367,7 +368,7 @@
 				display: flex;
 				flex-direction: column;	
 				align-items: center;
-				justify-content: center;
+				justify-content: center;				
 			}
 
 				&__text-575 p {
@@ -376,11 +377,13 @@
 				font-weight: 400;
 				text-transform: uppercase;
 				margin-bottom: 24px;
+				@include adaptiveValue("font-size", 36, 28);
 			}
 
 			&__text-575 span {
 				color: $redColor;
 				font-size: 36px;
+				@include adaptiveValue("font-size", 36, 28);
 			}	
 
 			&__image-575 {
@@ -401,9 +404,12 @@
 		}
 	}
 
+/*======Infochees=====*/
 	.infochees {
 		margin-top: toRem(64);
 		margin-bottom: toRem(200);
+		@include adaptiveValue("margin-top", 64, 30);
+		@include adaptiveValue("margin-bottom", 200, 120);
 	
 		&__container {
 			max-width: 1222px;
@@ -427,21 +433,21 @@
 	.infochees {
 		&__images {
 			flex: 0 1 38.788871%; /* 474/1222 */
-			height: 527px;
-			position: relative;
-
-			// @include adaptiveValue("height", 527, 402);
+			height: 527px;		
+			@include adaptiveValue("height", 527, 402);
 		}
 
 		@media (max-width: 830px) {
 			&__images {
-				flex: 1 1 100%;
+				flex: 0 1 100%;
 				position: relative;			
 		}
+
 	}
 }
 
 	.images {
+		position: relative;
 		margin-bottom: toRem(30px);
 			&__cooper {
 				position: absolute;
@@ -513,10 +519,13 @@
 			flex-direction: column;
 		}
 
-		@media (max-width: 830px) {
+		@media (max-width: 829px) {
 			&__content {
 				flex: 0 auto;
-		}
+			}
+			&__title {
+				margin-top: toRem(20);
+			}
 	}
 	
 		&__title {
@@ -550,12 +559,28 @@
 			border-bottom: 2px solid #D0D0D0; // Органичительная линия для ячеек
 			padding: toRem(16);
 		}
+
+		@media (max-width: 375px) {
+			&__table td {
+				display: block;
+				border-right: none;
+				width: 335px;
+				box-sizing: border-box;
+				text-align: left;
+			}
+		
+			&__second-column {
+				font-weight: 400;
+			}
+		}	
+
 		&__table tr {
 			border: none;
 		}
 	
 		&__first-column {
 			border-right: 2px solid #D0D0D0;
+			border-bottom: none;
 			color: $mainColor;
 			font-weight: normal;
 		}
@@ -575,6 +600,7 @@
 		}
 	}
 
+/*=======Stages======*/
 .stages {
 	margin-bottom: toRem(200);
 
@@ -587,24 +613,29 @@
 		&__title {
 			font-family: 'Merriweather';
 			text-transform: uppercase;
-			font-size: 3.375rem;
+			font-size: 54px;
 			line-height: 120%;
 			max-width: 50.375rem;
 			margin-bottom: toRem(54);
+			@include adaptiveValue("font-size", 54, 36);
 		}
 
 		&__title span {
 			display: inline-block;
 			font-family: "Golos Text";
-			font-size: 1.25rem;
+			font-size: toRem(20);
 			line-height: 120%;
 			text-transform: none;
-			margin-left: 1rem;
+			padding-left: toRem(16);
 			color: $blueColor;
 			@media (any-hover: hover) {
 				&:hover {
 					text-decoration: underline;
 				}
+			}
+
+			@media (max-width: 500) {
+				padding-left: 0;
 			}
 		}
 
@@ -615,7 +646,7 @@
 			display: grid;
 			grid-template-rows: 112px 112px 136px;
 			grid-template-columns: repeat(3, 394px);
-			gap: 20px;
+			gap: toRem(20);
 		}
 }
 .items-stages {	
@@ -687,9 +718,8 @@
 
 		}
 }
- /*=================================*/
-
-	.participants {
+/*======Participants=======*/
+.participants {
 		margin-bottom: 8.75rem;
 		display: flex;
 		gap: 30px;
@@ -710,16 +740,17 @@
 			font-family: 'Merriweather';
 			font-size: toRem(54);
 			line-height: 120%;
+			@include adaptiveValue("font-size", 54, 36);
 		}
 	
 		&__navigation {
 			display: flex;
 			gap: 15px;
 		}
-	}
+}
 
-	.swiper-button-prev,
-	.swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
 		width: 44px;
 		height: 44px;
 		background: #313131;
@@ -769,8 +800,8 @@
 		&__photo {
 			max-width: 100%;
 			position: relative;
-			width: 320px;
-			height: 320px;
+			max-width: 320px;
+			max-height: 320px;
 			margin-bottom: 28px;		
 			img {
 				max-width: 100%;
@@ -811,6 +842,3 @@
  		}
 	}
 }
-
-
-

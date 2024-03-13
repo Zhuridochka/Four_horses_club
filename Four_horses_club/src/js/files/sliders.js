@@ -85,11 +85,11 @@ function initSliders() {
 					spaceBetween: 0,
 					autoHeight: true,
 				},
-				768: {
+				575: {
 					slidesPerView: 2,
 					spaceBetween: 20,
 				},
-				1222: {
+				1100: {
 					slidesPerView: 3,
 					spaceBetween: 20,
 				},

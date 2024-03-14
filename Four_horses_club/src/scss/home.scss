@@ -24,26 +24,39 @@
 	&__participants {
 	}
 }
-//====================================================================================================
+
 /*=====Ширина экрана больше 1366px=====*/
+
 @media (min-width: 1366px) {
 
 .main {
 		position: relative;
 		width: 100%;
-		background: url('../img/main_page/BG_image_23.png') 0 0/cover no-repeat;
-		background-color: #E9DED4;		
-
+		min-height: 700px;
+		
 		&__container {
-			position: relative;
-			height: 100%;
+			position: absolute;
 		}
 
 		&__logo {
 			padding: 26px 0px 62px 0px;
 		}
 
-		&__images {	
+		&__image {	
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				max-width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 
 		&__content {
@@ -84,71 +97,7 @@
 			gap: 16px;
 		}
 }
-.images-main {
-	position: absolute;
-	overflow: hidden;
-	z-index: -1;
-	width: 1566px;
-	height: 100%;
-	bottom: 0;
-	right: 0;
 
-		&__image-ellipse {
-			position: absolute;
-			top: 0;
-			right: 186px;
-			}
-
-		&__image-ellipsname {
-			position: absolute;
-			top: 0;
-			right: 129px;
-		}
-
-		&__image-chessquin {
-			position: absolute;
-			top: 240px;
-			right: 658px;
-		}
-
-		&__image-chessking {
-			position: absolute;
-			max-width: 100%;
-			max-height: 100%;
-			top: 167px;
-			right: 12.1875rem;
-		}
-
-		&__image-city {
-			position: absolute;
-			right: 0px;
-			bottom: 0;
-		}
-
-		&__image-path {
-			position: absolute;
-			bottom: 0;
-			right: 20px;
-		}
-
-		&__image-vector {
-			position: absolute;
-			bottom: 0;
-			right: -2px;
-		}
-
-		&__image-chesssmall {
-			position: absolute;
-			bottom: 1.3125rem;
-			right: 192px;
-		}
-
-		&__image-chesshorse {
-			position: absolute;
-			bottom: 0.1875rem;
-			right: 30.125rem;
-		}
-}
 .three {
 		&__line {
 			text-align: center;
@@ -160,15 +109,14 @@
 		}
 	}
 }
-/*========================================*/
+
 /*=====Ширина экрана меньше 1366px=====*/
+
 @media (max-width: 1366px) {
 	.main {
 		position: relative;
 		width: 100%;
 		min-height: 700px;
-		background: url('../img/main_page/BG_image_23.png') 0 0/cover no-repeat;
-		background-color: #E9DED4;
 		
 		&__container {
 			max-width: 1222px;
@@ -186,7 +134,21 @@
 			}
 		}
 	
-		&__images {
+		&__image {	
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
 		}
 	
 		&__content {
@@ -239,73 +201,6 @@
 		}
 	}
 
-	.images-main {
-		position: absolute;
-		overflow: hidden;
-		z-index: -1;
-		width: 1566px;
-		height: 100%;
-		bottom: 0;
-		right: -13.75rem;
-		transition: all 0.3 ease;
-		@media (max-width: 1100px) {
-			opacity: 0.7;
-		}
-	
-		&__image-ellipse {
-			position: absolute;	
-			top: 0;
-			right: 5.375rem;
-		}
-	
-		&__image-ellipsname {
-			position: absolute;	
-			top: 0;
-			right: 29px;
-		}
-	
-		&__image-chessquin {
-			position: absolute;
-			top: 8.5rem;
-			right: 18.625rem;
-		}
-	
-		&__image-chessking {
-			position: absolute;
-			top: 5.3125rem;
-			right: 12.1875rem;	
-		}
-	
-		&__image-city {
-			position: absolute;
-			right: 0px;
-			bottom: 0;
-		}
-	
-		&__image-path {
-			position: absolute;
-			bottom: 0;
-			right: 20px;
-		}
-	
-		&__image-vector {
-			position: absolute;
-			bottom: 0;
-			right: -2px;
-		}
-	
-		&__image-chesssmall {
-			position: absolute;
-			bottom: 1.3125rem;
-			right: 192px;
-		}
-	
-		&__image-chesshorse {
-			position: absolute;
-			bottom: 0.1875rem;
-			right: 30.125rem;
-		}
-	}
 	.three {	
 		&__line {
 			text-align: center;
@@ -316,104 +211,113 @@
 			text-align: end;
 		}
 	}
-	.inform {
-	
-		&__container {
-			max-width: 76.375rem;
-			margin: 0 auto;
-			padding: 0 0.9375rem;
+
+/*======Inform=====*/
+
+.inform {
+	margin-top: toRem(80);
+
+	&__container {
+		max-width: 1266px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+
+	&__items {
+		font-family: 'Merriweather';
+		font-size: toRem(36);
+		font-weight: 400;
+		text-transform: uppercase;
+		line-height: 135%;
+		display: grid;
+		overflow: hidden;		
+		grid-template-columns: 62% 38%;
+		grid-template-rows: repeat(2, 1fr);	
+		@include adaptiveValue("font-size", 36, 28, 0, 1366, 375);	
+
+		@media(max-width: 850px) {
+			grid-template-columns: 1fr;
+			grid-template-rows: auto;
 		}
-	
-		&__body {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			margin-top: toRem(80);
-			@include adaptiveValue("font-size", 80, 48);
-		}
-		
-		&__text {
-			font-family: 'Merriweather';
-			font-size: toRem(36);
-			font-weight: 400;
-			text-transform: uppercase;
-			line-height: 135%;
-			flex: 0 0 62.520458%;  /* 764/1222 */
-			@include adaptiveValue("font-size", 36, 28);
+	}
+}
 
-			@media (max-width: 830px) {
-				display: none;
-			}
-		}
+.items-inform {
 
-		&__text span {
-			font-weight: 600;
-		}
-
-		@media (min-width: 830px) {
-			&__text-575 {
-				display: none;
-			}
-		}
-		
-		@media (max-width: 829px) {
-			&__body {
-				display: flex;
-				flex-direction: column;	
-				align-items: center;
-				justify-content: center;
-			}	
-
-			&__text-575 {
-				display: flex;
-				flex-direction: column;	
-				align-items: center;
-				justify-content: center;				
-			}
-
-				&__text-575 p {
-				font-family: 'Merriweather';
-				font-size: toRem(36);
-				font-weight: 400;
-				text-transform: uppercase;
-				margin-bottom: 24px;
-				@include adaptiveValue("font-size", 36, 24);
-			}
-
-			&__text-575 span {
-				color: $redColor;
-				font-size: 36px;
-				@include adaptiveValue("font-size", 36, 24);
-			}	
-
-			&__image-575 {
-				margin-bottom: 24px;
-				img {
-					max-width: 100%;
-					border-radius: 50%;
-				}
-			}
-		}	
-	
-		&__image {
-			max-width: 394px;
-			max-height: 250px;
-			img {
-				max-width: 100%;
-				border-radius: 50%;
-			}
-			@media (max-width: 829px) {
-				display: none;
-			}
+	&__text-1 {
+		grid-column: 1 / 2;
+		margin-right: 64px;	
+		@include adaptiveValue("margin-right", 64, 20, 0, 1366, 850);
+		@media (max-width: 850px) {
+			margin-right: 0;
+			margin-bottom: 24px;
 		}
 	}
 
+	&__image-575 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: 850px) {
+			margin-right: 0;
+			margin-bottom: 24px;
+		}
+		@media(min-width: 850px) {
+			display: none;
+		}
+		img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 50%;
+		}
+	}
+
+	&__text-2 {
+		grid-column: 1 / 2;
+		margin-right: 64px;	
+		@include adaptiveValue("margin-right", 64, 20, 0, 1366, 850);
+		@media (max-width: 850px) {
+			margin-right: 0;
+		}
+	}
+
+	&__text-2 span {
+		@media(min-width: 850px) {
+			font-weight: 600;
+		}
+		@media(max-width: 850px) {
+			color: $redColor;
+		}
+	}
+
+	&__image {
+			grid-column-start: 2;
+			grid-row-start: 1;
+			grid-row-end: 3;
+			display: flex;		
+			justify-content: center;
+			margin-right: 0px;
+	
+			img {
+				max-width: 100%;
+				height: 100%;
+				border-radius: 50%;
+			}
+				@media(max-width: 849px) {
+					display: none;
+			}	
+		}
+}
+
+/*-----------------------------------*/
+
 /*======Infochees=====*/
+
 	.infochees {
 		margin-top: toRem(64);
 		margin-bottom: toRem(200);
 		@include adaptiveValue("margin-top", 64, 30);
-		@include adaptiveValue("margin-bottom", 200, 120);
+		@include adaptiveValue("margin-bottom", 200, 120, 0, 1366, 375);
 	
 		&__container {
 			max-width: 1222px;
@@ -425,6 +329,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			justify-items: start;
 			gap: 44px;
 		}
 
@@ -435,199 +340,136 @@
 			}	
 		}
 
-	.infochees {
-		&__images {
+		&__image {
 			flex: 0 1 38.788871%; /* 474/1222 */
-			height: 527px;		
-			margin-bottom: toRem(30px);
-			@include adaptiveValue("height", 527, 402, 0, 1366, 375);
-			@include adaptiveValue("height", 401, 350, 0, 374, 320);
+			// align-items: center;
+			display: flex;
+			margin: 0 auto;
+			height: 100%;
+			// justify-content: center;
+			// height: 527px;
+			overflow: hidden;
+			// @include adaptiveValue("height", 527, 402, 0, 1366, 375);
+			// @include adaptiveValue("height", 401, 350, 0, 374, 320);
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: fill;
+			}
 		}
 
 		@media (max-width: 830px) {
-			&__images {
+			&__image {
 				margin: 0 auto;
-				flex: 0 1 50%;
+				flex: 0 1 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+
+	&__content {
+		flex: 0 1 57.610475%; /* 704/1222 */
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 829px) {
+		&__content {
+			margin: 0 auto;
+			flex: 0 1 100%;
+		}
+		&__title {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: toRem(20);
+		}
+	}
+
+	&__title {
+		font-family: 'Merriweather';
+		line-height: 135%;
+		font-size: 36px;
+		text-transform: uppercase;
+
+		@include adaptiveValue("font-size", 36, 28);
+		@media (max-width: 320px){
+			max-width: 315px;
+		}
+	}
+
+	&__title span {
+		color: $redColor;
+		font-weight: 700;
+	}
+
+	&__title:not(:last-child){
+		margin-bottom: toRem(44);
+	}
+
+	&__table {
+		border-collapse: collapse; // Убираем внешние границы между ячейками
+		width: 100%; // Ширина таблицы
+	}
+
+	&__table:not(:last-child) {
+		margin-bottom: 3rem;
+	}
+
+	&__table td {
+		border-bottom: 2px solid #D0D0D0; // Органичительная линия для ячеек
+		padding: toRem(16);
+	}
+
+	@media (max-width: 375px) {
+		&__table td {
+			display: block;
+			border-right: none;
+			width: 335px;
+			box-sizing: border-box;
+			text-align: left;
+		}
+	
+		&__second-column {
+			font-weight: 400;
+		}
+	}	
+
+	&__table tr {
+		border: none;
+	}
+
+	&__first-column {
+		border-right: 2px solid #D0D0D0;
+		border-bottom: none;
+		color: $mainColor;
+		font-weight: normal;
+	}
+
+	&__second-column {
+		font-weight: 600;
+	}
+
+	&__second-column span {
+		text-decoration: line-through;
+		text-decoration-color: $redColor;
+	}
+
+	&__bottom {
+		line-height: 120%;
+		color: $blueColor;
+		@media (max-width: 320px){
+			max-width: 310px;
 		}
 	}
 }
 
-	.images {
-		position: relative;		
-			&__cooper {
-				position: absolute;
-				top: 40px;
-				left: 1.375rem;
-				img {
-					max-width: 100%;
-				}
-			}
-	
-			&__nominale {
-				position: absolute;
-				top: 22px;
-				right: 0;
-				img {
-					max-width: 100%;
-				}
-			}
-	
-			&__Vector-big {
-				position: absolute;
-				top: -27px;
-				right: -27px;
-				img {
-					max-width: 100%;
-				}
-			}
-	
-			&__men {
-				position: absolute;
-				top: 88px;
-				right: 60px;
-				img {
-					max-width: 100%;
-				}
-			}
-	
-			&__Vector-small {
-				position: absolute;
-				bottom: 17px;
-				left: -15px;
-				img {
-					max-width: 100%;
-				}
-				@media (max-width: 830px){
-					bottom: 45px;
-				}
-			}
-	
-			&__black-horse {
-				position: absolute;
-				bottom: 5px;
-				left: 63px;
-				img {
-					max-width: 100%;
-				}
-				@media (max-width: 830px){
-					left: 35px;
-					bottom: 35px;
-				}
-			}
-	
-			&__arm {
-				position: absolute;
-				bottom: -94px;
-				right: 0;
-				img {
-					max-width: 100%;
-				}
-				@media (max-width: 830px){
-					bottom: -10px;
-				}
-			}
-	}
-
-	&__content {
-			flex: 0 1 57.610475%; /* 704/1222 */
-			display: flex;
-			flex-direction: column;
-			margin: 0 auto;
-		}
-
-		@media (max-width: 829px) {
-			&__content {
-				margin: 0 auto;
-				flex: 0 1 100%;
-			}
-			&__title {
-				display: flex;
-				flex-wrap: wrap;
-				margin-top: toRem(20);
-			}
-	}
-	
-		&__title {
-			font-family: 'Merriweather';
-			line-height: 135%;
-			font-size: 36px;
-			text-transform: uppercase;
-
-			@include adaptiveValue("font-size", 36, 22);
-			@media (max-width: 320px){
-				max-width: 315px;
-			}
-		}
-
-		&__title span {
-			color: $redColor;
-			font-weight: 700;
-		}
-
-		&__title:not(:last-child){
-			margin-bottom: toRem(44);
-		}
-	
-		&__table {
-			border-collapse: collapse; // Убираем внешние границы между ячейками
-			width: 100%; // Ширина таблицы
-		}
-
-		&__table:not(:last-child) {
-			margin-bottom: 3rem;
-		}
-
-		&__table td {
-			border-bottom: 2px solid #D0D0D0; // Органичительная линия для ячеек
-			padding: toRem(16);
-		}
-
-		@media (max-width: 375px) {
-			&__table td {
-				display: block;
-				border-right: none;
-				width: 335px;
-				box-sizing: border-box;
-				text-align: left;
-			}
-		
-			&__second-column {
-				font-weight: 400;
-			}
-		}	
-
-		&__table tr {
-			border: none;
-		}
-	
-		&__first-column {
-			border-right: 2px solid #D0D0D0;
-			border-bottom: none;
-			color: $mainColor;
-			font-weight: normal;
-		}
-	
-		&__second-column {
-			font-weight: 600;
-		}
-
-		&__second-column span {
-			text-decoration: line-through;
-			text-decoration-color: $redColor;
-		}
-	
-		&__bottom {
-			line-height: 120%;
-			color: $blueColor;
-			@media (max-width: 320px){
-				max-width: 310px;
-			}
-		}
-	}
-
 /*=======Stages======*/
+
 .stages {
-	margin-bottom: toRem(200);
+	// margin-bottom: toRem(200);
+	@include adaptiveValue("margin-bottom", 200, 120, 0, 1366, 375);
 
 		&__container {
 			position: relative;
@@ -686,13 +528,15 @@
 			line-height: 120%;
 			font-size: 1.25rem;
 			display: grid;
-			grid-template-rows: 112px 112px 136px;
-			grid-template-columns: repeat(3, 394px);
-			gap: toRem(20);
+			overflow: hidden;
+			grid-template-rows: 1fr 1fr auto;
+			grid-template-columns: repeat(3, 1fr);
+			gap: toRem(20);	
 		}
 }
 .items-stages {	
-	
+		height: auto;
+
 		&__item {
 			background-color: #F0E1CF;
 			display: flex;
@@ -753,8 +597,9 @@
 		}
 }
 /*======Participants=======*/
+
 .participants {
-		margin-bottom: 8.75rem;
+		margin-bottom: 140px;
 		display: flex;
 		gap: 30px;
 	
@@ -876,3 +721,6 @@
  		}
 	}
 }
+
+/*-----------------------------------*/
+

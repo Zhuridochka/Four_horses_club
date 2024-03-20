@@ -1,1 +1,14 @@
-/*# sourceMappingURL=common.css.map */
+@charset "UTF-8";
+/*=====Бегущая строка=======*/
+.section__ticker {
+  gap: 12px;
+  width: 100%;
+  display: flex;
+  padding: 18px;
+  position: relative;
+  max-width: 2335px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #f54932;
+}/*# sourceMappingURL=common.css.map */

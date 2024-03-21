@@ -615,7 +615,10 @@
 .participants {
   margin-bottom: 140px;
 		&__container {
+			max-width: 1222px;
+			height: 100%;
 		}
+		
     &__top {
       display: flex;
       justify-content: space-between;
@@ -625,11 +628,10 @@
 		&__slider {     
 		}
 		&__body {
-      margin: 0px -15px;
+      margin: 0px auto;
       display: flex;
 		}
 		&__column {
-      padding: 0 15px;
       flex: 0 1 33.3333%;
 		}
 		&__items {
@@ -704,14 +706,15 @@
       justify-content: center;
       align-items: center;
       border-radius: 50%;
+			margin-right: 35px;
+			margin-left: 35px;
       margin-bottom: 28px;
 	      img {
         position: absolute;
         bottom: 0;
         max-width: 100%;
         border-radius: 50%;	
-				padding: 0 35px;
-      }
+			}
 		}
 
 		&__content {

@@ -1,0 +1,65 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	font-family: 'Montserrat';
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 120%;
+	display: flex;
+	padding: 14px 49px;
+	max-width: 263px;
+	border: 1px solid #303030;
+	color: #303030;
+	border-radius: 40px;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #1F1F1F;
+			color: #fff;
+		}
+	}
+
+	@media (max-width: 1100px) {
+		background-color: #fff;
+		color: #1F1F1F;
+		border: none;
+		opacity: 0.89;
+		// border-radius: 66px;
+		// display: flex;
+		// justify-content: center;
+		// padding: 18px 20px;
+	}
+
+	@media (max-width: 585px) {
+		width: 100%;
+		max-width: 365px;
+		background-color: #fff;
+		color: #1F1F1F;
+		border: none;
+		opacity: 0.89;
+		border-radius: 66px;
+		display: flex;
+		justify-content: center;
+		padding: 18px 20px;
+	}
+
+	&_black {
+		background-color: #060606;
+		color: #fff;
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid #303030;
+				color: #303030;
+				background-color: $yellowColor;
+		}
+	}
+
+	&--fw {
+		width: 100%;}
+	}
+}
+
